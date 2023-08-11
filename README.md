@@ -13,6 +13,7 @@ Note that the blue shade is not the total area, but the deviation from the time 
 
 ### Conoculator Purpose
 The authors of the conoculator propose to use more calculus measures than iAUC as a means of characterizing the shape of a post-prandial glucose curve. Additionally, we want to make the calculation of these calculus based statistics easy for anyone with discrete data regardless of the interval that they used while also allowing them the ability to impute (fill in missing data) time series data without getting technical in the mathematics.
+![image](https://github.com/nph-westpoint/conoculator/assets/142028542/123a7d71-9301-4d97-95de-d84d8a9ad94d)
 
 ### Imputer Tool
 The time series data used by the conoculator should not be imputed in the traditional methods because each row of data represents a human body response at particular times. Imputing the time series data should occur within each row rather than using a traditional imputing methods which use columns. Therefore, we have created a tool which allows researchers to fill in missing data if it mathematically makes sense to do so. This tool is included in the repository.
