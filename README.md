@@ -1,4 +1,4 @@
-# conoculator2.0
+# Conoculator 2.0
 Capturing Calculus Measurements from Discrete Data
 
 ### General Information
@@ -9,29 +9,30 @@ Glucose values are measured after a pre-determined amount of fasting has occurre
 Currently, iAUC is the only calculation used to determine the health of the patient. iAUC is the difference between the total area under the curve and normal homeostasis value.
 ![image](https://github.com/nph-westpoint/conoculator/assets/142028542/d4e21d31-8022-4832-b030-dbafb3e6802c)
 
-Note that the blue shade is not the total area, but the deviation from the time that the meal was given which is why it is referred to as the incremental area under the curve. Also, a standard amount of time to measure is 2 hours which you can see from the picture.
+Note that the blue shade is not the total area, but the deviation from the time that the meal was given which is why it is referred to as the incremental area under the curve. Also, a standard amount of time to measure (referred to as measurement period) is 2-4 hours. The example shows a two-hour measurement period.
 
-### Purpose
+### Conoculator Purpose
 The authors of the conoculator propose to use more calculus measures than iAUC as a means of characterizing the shape of a post-prandial glucose curve. Additionally, we want to make the calculation of these calculus based statistics easy for anyone with discrete data regardless of the interval that they used while also allowing them the ability to impute (fill in missing data) time series data without getting technical in the mathematics.
 
-
+### Imputer Tool
+The time series data used by the conoculator should not be imputed in the traditional methods because each row of data represents a human body response at particular times. Imputing the time series data should occur within each row rather than using a traditional imputing methods which use columns. Therefore, we have created a tool which allows researchers to fill in missing data if it mathematically makes sense to do so. This tool is included in the repository.
 
 ### Data Dictionary for Results
 - auc180: The area under the curve for 180 minutes.
 - auc240: The area under the curve for 240 minutes.
 - iauc180: The incremental area under the curve for 180 minutes. Note that if your data stops before 180 minutes, that this measure will be erroneous.
 - iauc240: The incremental area under the curve for 240 minutes. Note that if your data stops before 240 minutes, that this measure will be erroneous.
-- max_inc_time:
-- max_inc_val:
-- max_dec_time:
-- max_dec_val:
-- abs_max_time:
-- abs_max_val:
-- inf_pt_time:
-- inf_pt_val:
-- tot_crit_pts:
-- local_max:
-- local_min:
+- max_inc_time: The time where the maximum rate of change (incline) for the curve occurs over the measurement period.
+- max_inc_val: The value of the maximum rate of change (incline) for the curve over the measurement period.
+- max_dec_time: The time where the maximum negative rate of change (decline) for the curve occurs over the measurement period.
+- max_dec_val: The value of the maximum negative rate of change (decline) for the curve over the measurement period.
+- abs_max_time: The time where the maximum over the measurement period occurs.
+- abs_max_val: The value of the maximum over the measurement period.
+- inf_pt_time: The time where the inflection point after the absolute max occurs.
+- inf_pt_val: The measurement value at the time of the inflection point after the absolute max. 
+- tot_crit_pts: The total number of local maximums and minimums (peaks and valleys).
+- local_max: The points (time and value) where the local maximums occur (peaks).
+- local_min: The points (time and value) where the local minimums occur (valleys).
 
 
 ### Documentation
