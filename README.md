@@ -12,7 +12,8 @@ Currently, iAUC is the only calculation used to determine the health of the pati
 Note that the blue shade is not the total area, but the deviation from the time that the meal was given which is why it is referred to as the incremental area under the curve. Also, a standard amount of time to measure (referred to as measurement period) is 2-4 hours. The example shows a two-hour measurement period.
 
 ### Conoculator Purpose
-The authors of the conoculator propose to use more calculus measures than iAUC as a means of characterizing the shape of a post-prandial glucose curve. Additionally, we want to make the calculation of these calculus based statistics easy for anyone with discrete data regardless of the interval that they used while also allowing them the ability to impute (fill in missing data) time series data without getting technical in the mathematics.
+The authors of the conoculator propose to use more calculus measures than iAUC as a means of characterizing the shape of a post-prandial glucose curve. Additionally, we want to make the calculation of these calculus-based statistics easy for anyone with discrete data regardless of the interval that they used while also allowing them the ability to impute (fill in missing data) time series data without getting technical in the mathematics. The following graphic shows a curve and the location of the statistics that are calculated and downloaded into a .csv file for further analysis.
+
 ![image](https://github.com/nph-westpoint/conoculator/assets/142028542/123a7d71-9301-4d97-95de-d84d8a9ad94d)
 
 ### Imputer Tool
