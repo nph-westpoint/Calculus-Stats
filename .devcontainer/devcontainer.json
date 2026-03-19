@@ -1,0 +1,13 @@
+{
+  "name": "Streamlit Data App",
+  "image": "mcr.microsoft.com/devcontainers/python:3.10",
+  "forwardPorts": [8501],
+  "portsAttributes": {
+    "8501": {
+      "label": "Streamlit Preview",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt",
+  "postAttachCommand": "streamlit run app.py"
+}
