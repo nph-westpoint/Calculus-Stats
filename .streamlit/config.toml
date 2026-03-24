@@ -1,4 +1,12 @@
+[theme]
+primaryColor = "#F63366"          # Color for active elements (sliders, etc.)
+backgroundColor = "#FFFFFF"       # Main background color
+secondaryBackgroundColor = "#F0F2F6" # Sidebar and widget background
+textColor = "#262730"             # Main text color
+font = "sans serif"               # "sans serif", "serif", or "mono"
+
 [server]
 enableCORS = false
 enableXsrfProtection = false
 headless = true
+
