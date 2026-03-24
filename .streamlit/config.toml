@@ -7,6 +7,9 @@ font = "sans serif"               # "sans serif", "serif", or "mono"
 
 [server]
 enableCORS = false
-enableXsrfProtection = false
-headless = true
+port = 8501
+maxUploadSize = 200
 
+[browser]
+gatherUsageStats = false          # Disable telemetry
+serverAddress = "localhost"
